@@ -1,13 +1,12 @@
-
 /*
 =========================================================
 Stored Procedure: Load Bronze Layer (Source -> Bronze) 
 =========================================================
 Script Purpose : 
-	This stored procedure loads the data from source system to the 'bronze' schema from external CSV file .
-	It performs the following actions :
-	- Truncate the 'bronze' tables before loading 
-	- Uses the `BULK INSERT` command to load the data from csv file to bronze tables 
+	This stored procedure loads the data from source system to the 'bronze' schema from external CSV file.
+Action performed:
+	- Truncate the 'bronze' tables before loading. 
+	- Uses the `BULK INSERT` command to load the data from csv file to bronze tables. 
 
 Usage Example: 
 	EXEC bronze.load_bronze
@@ -40,7 +39,7 @@ BEGIN
 		SET @end_time = GETDATE () ;
 		PRINT '>> Load Durantion:' + CAST(DATEDIFF(Second , @start_time , @end_time ) as NVARCHAR) + ' Seconds' ;
 
-		PRINT '---------------------'
+		PRINT '---------------------------------------'
 
 		SET @start_time = GETDATE ()
 		Print '>> Truncating Table: bronze.crm_prd_info' ;
@@ -56,7 +55,7 @@ BEGIN
 		SET @end_time = GETDATE ()
 		PRINT '>> Load Durantion:' + CAST(DATEDIFF(Second , @start_time , @end_time ) as NVARCHAR) + ' Seconds'
 		
-		PRINT '---------------------'
+		PRINT '---------------------------------------'
 
 		SET @start_time = GETDATE ()
 		Print '>> Truncating Table: bronze.crm_sales_details' ;
@@ -71,8 +70,7 @@ BEGIN
 		);
 		SET @end_time = GETDATE ()
 		PRINT '>> Load Durantion:' + CAST(DATEDIFF(Second , @start_time , @end_time ) as NVARCHAR) + ' Seconds'
-		
-		PRINT '---------------------'
+
 
 		PRINT '---------------------------------------' ;
 		Print '-->> Loading ERP Tables' ;
@@ -92,7 +90,7 @@ BEGIN
 		SET @end_time = GETDATE ()
 		PRINT '>> Load Durantion:' + CAST(DATEDIFF(Second , @start_time , @end_time ) as NVARCHAR) + ' Seconds'
 		
-		PRINT '---------------------'
+		PRINT '---------------------------------------'
 
 		SET @start_time = GETDATE ()
 		Print '>> Truncating Table: bronze.erp_loc_a101' ;
@@ -108,7 +106,7 @@ BEGIN
 		SET @end_time = GETDATE ()
 		PRINT '>> Load Durantion:' + CAST(DATEDIFF(Second , @start_time , @end_time ) as NVARCHAR) + ' Seconds'
 		
-		PRINT '---------------------'
+		PRINT '---------------------------------------'
 
 		SET @start_time = GETDATE ()
 		Print '>> Truncating Table: bronze.erp_px_cat_g1v2' ;
@@ -124,11 +122,11 @@ BEGIN
 		SET @end_time = GETDATE ()
 		PRINT '>> Load Durantion:' + CAST(DATEDIFF(Second , @start_time , @end_time ) as NVARCHAR) + ' Seconds'
 		
-		PRINT '---------------------'
+		PRINT '---------------------------------------'
 
 	END TRY 
 	BEGIN CATCH 
-		PRINT '==========================================';
+		Print'=========================================='
 		PRINT 'ERROR OCUURED DURING LOADING BRONZE LAYER';
 		PRINT 'Error Message: ' + ERROR_MESSAGE () ;
 		PRINT 'Error Number: ' + CAST (ERROR_NUMBER () as NVARCHAR ) ;
@@ -136,8 +134,9 @@ BEGIN
 		PRINT '==========================================';
 	END CATCH 
 	SET @batch_end_time = GETDATE() ;
-		PRINT '=============================';
+		Print'=========================================='
 		PRINT 'Loading Bronze Layer is Completed';
-		PRINT '	- Total Load Duration:' + CAST(DATEDIFF(Second , @batch_start_time , @batch_end_time) AS VARCHAR ) + ' seconds'
-		PRINT '=============================';
+		PRINT '--->> Total Load Duration:' + CAST(DATEDIFF(Second , @batch_start_time , @batch_end_time) AS VARCHAR ) + ' seconds'
+		Print'=========================================='
 END
+
