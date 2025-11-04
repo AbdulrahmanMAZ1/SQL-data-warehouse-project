@@ -77,6 +77,8 @@ These insights empower stakeholders with key business metrics for strategic deci
 For detailed requirements, see [docs/requirements.md](docs/requirements.md).
 
 ---
+## 📂 Repository Structure
+
 data-warehouse-project/
 │
 ├── datasets/ # Raw datasets (ERP and CRM)
@@ -98,8 +100,7 @@ data-warehouse-project/
 ├── README.md # Project overview (this file)
 ├── LICENSE # License information
 ├── .gitignore # Git ignore rules
-└── requirements.txt # Dependencies and requirements 
-```
+└── requirements.txt # Dependencies and requirements
 
 ---
 
@@ -127,9 +128,4 @@ Let’s connect and grow together 👇
 ![ETL](https://img.shields.io/badge/ETL-Pipeline-green?style=flat-square&logo=microsoft-sql-server)
 ![DataModeling](https://img.shields.io/badge/Data_Modeling-Star_Schema-orange?style=flat-square&logo=database)
 ![Analytics](https://img.shields.io/badge/Analytics-Business_Insights-yellow?style=flat-square&logo=tableau)
-![Architecture](https://img.shields.io/badge/Architecture-Medallion-lightgrey?style=flat-square&logo=azure-data-explorer)
-
-
-
-## 📂 Repository Structure
-
+![Architecture](https://img.shields.io/badge/Architecture-Medallion-lightgrey?style=flat-square&logo=azure-dat
