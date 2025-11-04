@@ -120,12 +120,3 @@ Let’s connect and grow together 👇
 
 [![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-Abdulrahman_Mohamed-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abdulrahman-mohamed-17484928a/)
 
----
-
-## 🏷️ Project Badges
-
-![SQL](https://img.shields.io/badge/SQL-Data%20Queries-blue?style=flat-square&logo=databricks)
-![ETL](https://img.shields.io/badge/ETL-Pipeline-green?style=flat-square&logo=microsoft-sql-server)
-![DataModeling](https://img.shields.io/badge/Data_Modeling-Star_Schema-orange?style=flat-square&logo=database)
-![Analytics](https://img.shields.io/badge/Analytics-Business_Insights-yellow?style=flat-square&logo=tableau)
-![Architecture](https://img.shields.io/badge/Architecture-Medallion-lightgrey?style=flat-square&logo=azure-dat
