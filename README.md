@@ -79,29 +79,30 @@ For detailed requirements, see [docs/requirements.md](docs/requirements.md).
 ---
 ## 📂 Repository Structure
 
+```
 data-warehouse-project/
 │
-├── datasets/ # Raw datasets (ERP and CRM)
+├── datasets/                     # Raw datasets (ERP and CRM)
 │
-├── docs/ # Documentation and diagrams
-│ ├── data_architecture.drawio
-│ ├── data_catalog.md
-│ ├── data_flow.drawio
-│ ├── data_models.drawio
-│ ├── naming-conventions.md
+├── docs/                         # Documentation and diagrams
+│   ├── data_architecture.drawio  
+│   ├── data_catalog.md  
+│   ├── data_flow.drawio  
+│   ├── data_models.drawio  
+│   ├── naming-conventions.md  
 │
-├── scripts/ # SQL scripts for each layer
-│ ├── bronze/ # Raw data loading
-│ ├── silver/ # Data cleaning & transformation
-│ ├── gold/ # Analytical data models
+├── scripts/                      # SQL scripts for each layer
+│   ├── bronze/                   # Raw data loading
+│   ├── silver/                   # Data cleaning & transformation
+│   ├── gold/                     # Analytical data models
 │
-├── tests/ # Data validation and quality checks
+├── tests/                        # Data validation and quality checks
 │
-├── README.md # Project overview (this file)
-├── LICENSE # License information
-├── .gitignore # Git ignore rules
-└── requirements.txt # Dependencies and requirements
-
+├── README.md                     # Project overview (this file)
+├── LICENSE                       # License information
+├── .gitignore                    # Git ignore rules
+└── requirements.txt              # Dependencies and requirements
+```
 ---
 
 ## 🛡️ License
